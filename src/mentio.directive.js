@@ -363,7 +363,7 @@ angular.module('mentio', [])
                             return;
                         }
                         if (scope.triggerCharSet === undefined) {
-                            $log.error('Error, no mentio-items attribute was provided, ' +
+                            $log.debug('Error, no mentio-items attribute was provided, ' +
                                 'and no separate mentio-menus were specified.  Nothing to do.');
                             return;
                         }
@@ -606,7 +606,7 @@ angular.module('mentio', [])
                 scope.adjustScroll = function (direction) {
                     var menuEl = element[0];
                     var menuItemsList = menuEl.querySelector('ul');
-                    var menuItem = (menuEl.querySelector('[mentio-menu-item].active') || 
+                    var menuItem = (menuEl.querySelector('[mentio-menu-item].active') ||
                         menuEl.querySelector('[data-mentio-menu-item].active'));
 
                     if (scope.isFirstItemActive()) {
